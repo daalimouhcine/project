@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    font-family: 'poppins'
+}
+
+.rh_side:hover .img_rh, .rh_side:hover .name_rh{
+    display: block !important;
+}
+
+.force_white {
+    color: white !important;
+}
+.force_gray {
+    color: gray !important;
+}
+.force_black {
+    color: rgb(14, 14, 14) !important;
+}
+.force_m_0 {
+    margin-top: 10px !important;
+}
+
+.demandeMessage dd, .demandeMessage div,
+.demandeMessage dl, .demandeMessage dt, .demandeMessage fieldset, .demandeMessage form,
+.demandeMessage frame, .demandeMessage frameset,
+.demandeMessage h1, .demandeMessage h2, .demandeMessage h3, .demandeMessage h4,
+.demandeMessage h5, .demandeMessage h6, .demandeMessage noframes,
+.demandeMessage ol, .demandeMessage p, .demandeMessage ul, .demandeMessage center,
+.demandeMessage dir, .demandeMessage hr,.demandeMessage  menu, .demandeMessage pre   { display: block; unicode-bidi: embed }
+.demandeMessage li              { display: list-item }
+.demandeMessage tr              { display: table-row }
+.demandeMessage thead           { display: table-header-group }
+.demandeMessage tbody           { display: table-row-group }
+.demandeMessage tfoot           { display: table-footer-group }
+.demandeMessage col             { display: table-column }
+.demandeMessage colgroup        { display: table-column-group }
+.demandeMessage td, .demandeMessage th { display: table-cell }
+.demandeMessage caption         { display: table-caption }
+.demandeMessage th              { font-weight: bolder; text-align: center }
+.demandeMessage caption         { text-align: center }
+.demandeMessage h1              { font-size: 2em; margin: .67em 0 }
+.demandeMessage h2              { font-size: 1.5em; margin: .75em 0 }
+.demandeMessage h3              { font-size: 1.17em; margin: .83em 0 }
+.demandeMessage h4, .demandeMessage p,
+.demandeMessage blockquote, .demandeMessage ul,
+.demandeMessage fieldset, .demandeMessage form,
+.demandeMessage ol, .demandeMessage dl, .demandeMessage dir,
+.demandeMessage menu            { margin: 1.12em 0 }
+.demandeMessage h5              { font-size: .83em; margin: 1.5em 0 }
+.demandeMessage h6              { font-size: .75em; margin: 1.67em 0 }
+.demandeMessage h1, .demandeMessage h2, .demandeMessage h3, .demandeMessage h4,
+.demandeMessage h5, .demandeMessage h6, .demandeMessage b,
+.demandeMessage strong          { font-weight: bolder }
+.demandeMessage blockquote      { margin-left: 40px; margin-right: 40px }
+.demandeMessage i, .demandeMessage cite, .demandeMessage em,
+.demandeMessage var, .demandeMessage address    { font-style: italic }
+.demandeMessage pre, .demandeMessage tt, .demandeMessage code,
+.demandeMessage kbd, .demandeMessage samp       { font-family: monospace }
+.demandeMessage pre             { white-space: pre }
+.demandeMessage button, .demandeMessage textarea,
+.demandeMessage input, .demandeMessage select   { display: inline-block }
+.demandeMessage big             { font-size: 1.17em }
+.demandeMessage small, .demandeMessage sub, .demandeMessage sup { font-size: .83em }
+.demandeMessage sub             { vertical-align: sub }
+.demandeMessage sup             { vertical-align: super }
+.demandeMessage table           { border-spacing: 2px; }
+.demandeMessage thead, .demandeMessage tbody,
+.demandeMessage tfoot           { vertical-align: middle }
+.demandeMessage td, .demandeMessage th, .demandeMessage tr      { vertical-align: inherit }
+.demandeMessage s, .demandeMessage strike, .demandeMessage del  { text-decoration: line-through }
+.demandeMessage hr              { border: 1px inset }
+.demandeMessage ol, .demandeMessage ul, .demandeMessage dir,
+.demandeMessage menu, .demandeMessage dd        { margin-left: 40px }
+.demandeMessage ol              { list-style-type: decimal }
+.demandeMessage ol .demandeMessage ul, .demandeMessage ul .demandeMessage ol,
+.demandeMessage ul .demandeMessage ul, .demandeMessage ol .demandeMessage ol    { margin-top: 0; margin-bottom: 0 }
+.demandeMessage u, .demandeMessage ins          { text-decoration: underline }
+.demandeMessage br:before       { content: "\A"; white-space: pre-line }
+.demandeMessage  center          { text-align: center }
+
+.demandeMessage a{
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+    border-bottom: 1px solid;
+    color: #007bff;
+    }
+ .demandeMessage ul li{
+    display: list-item; 
+    list-style-type: disc;   
+}
+
+
+@media print {
+  .demandeMessage h1            { page-break-before: always }
+  .demandeMessage h1, .demandeMessage h2, .demandeMessage h3,
+  .demandeMessage h4, .demandeMessage h5, .demandeMessage h6    { page-break-after: avoid }
+  .demandeMessage ul, .demandeMessage ol, .demandeMessage dl    { page-break-before: avoid }
+}
+.chart{
+    height: 100% !important
+}
+

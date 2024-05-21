@@ -1,0 +1,217 @@
+.bg_calendar {
+  background: linear-gradient(#2BAA93, #1C8ACF);
+}
+.year_part_calendar {
+  position: relative;
+  pointer-events: none;
+  text-align: center;
+  height: fit-content;
+}
+.year_part_calendar .year_big_bg {
+  font-size: 20vmax;
+  user-select: none;
+  pointer-events: none;
+  font-weight: 900;
+  right: 50%;
+  top: 0%;
+  transform: translate(50%,-25%);
+  position: absolute;
+  color: rgba(255, 255, 255, 0.365);
+}
+.year_part_calendar .year_big_title {
+  font-size: 9vmax;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+}
+
+@media (max-width: 1025px) {
+  .year_part_calendar .year_big_bg {
+    font-size: 28vmax;
+  }
+  .year_part_calendar .year_big_title {
+    font-size: 13vmax;
+  }
+}
+
+
+.modal_calendar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.309);
+  height: 1px;
+  overflow-x: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: width 0.5s ease 0.5s, height 0.5s ease;
+  transition: width 0.5s ease 0.5s, height 0.5s ease;
+  width: 0;
+  z-index: 3;
+}
+
+.modal_calendar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.modal_calendar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.content_calendar {
+  color: transparent;
+  font-family: "Consolas", arial, sans-serif;
+  font-size: 2em;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+  width: 100%;
+}
+
+.openCalendar .exit {
+  height: 0;
+  opacity: 0;
+  width: 0;
+}
+
+.openCalendar .exit:focus {
+  outline: none;
+}
+
+.openCalendar .exit {
+  height: 40px;
+  opacity: 1;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 4;
+  -webkit-appearance: none;
+  width: 40px;
+}
+
+.openCalendar .exit::after,
+.openCalendar .exit::before {
+  border-top: 3px solid #fff;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 100%;
+  pointer-events: none;
+}
+
+.openCalendar .exit::after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+#label_button_calendar {
+  display: none;
+}
+.openCalendar #label_button_calendar {
+  display: block;
+}
+.openCalendar #label_button_calendar {
+  background-color: red;
+  z-index: 50;
+  -webkit-appearance: none;
+  opacity: 0;
+  height: 0;
+  opacity: 0;
+  width: 0;
+}
+
+@-webkit-keyframes outofform {
+  0% {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  50% {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+  100% {
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
+  }
+}
+
+@keyframes outofform {
+  0% {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  50% {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+  100% {
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
+  }
+}
+
+.openCalendar button#label_button_calendar {
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+
+.openCalendar .modal_calendar {
+  height: 100%;
+  width: 100%;
+  -webkit-transition: width 0.5s ease, height 0.5s ease 0.5s;
+  transition: width 0.5s ease, height 0.5s ease 0.5s;
+}
+
+.openCalendar .modal_calendar .content_calendar {
+  color: #fff;
+  -webkit-transition: color 0.5s ease 0.5s;
+  transition: color 0.5s ease 0.5s;
+}
+
+.disable_date {
+  position: relative;
+  z-index: 4;
+  -webkit-appearance: none;
+  background-color: rgb(229, 231, 235);
+  background-color: #100D3F;
+  color: #fff;
+}
+.disable_date:hover {
+  background-color: #100D3F;
+}
+
+.disable_date::after,
+.disable_date::before {
+  border-top: 3px solid #BA9672;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 100%;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.disable_date::after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
